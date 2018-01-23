@@ -620,8 +620,7 @@ public class InstalledAppDetails extends AppInfoBase
                 .setSummary(summary)
                 .setIsInstantApp(isInstantApp)
                 .done(activity, false /* rebindActions */);
-        mVersionPreference.setSummary(getString(R.string.version_text,
-                BidiFormatter.getInstance().unicodeWrap(pkgInfo.versionName)));
+        mVersionPreference.setSummary(BidiFormatter.getInstance().unicodeWrap(pkgInfo.versionName));
         mPackageNamePreference.setSummary(pkgInfo.packageName);
     }
 
